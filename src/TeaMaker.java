@@ -1,12 +1,17 @@
+import javax.swing.JOptionPane;
+
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2017
  *    Level 1
  */
 
 public class TeaMaker {
-
-	/* Figure out how to make a cup of tea using the classes below */
-
+	public static void main(String[] args) {
+		/* Figure out how to make a cup of tea using the classes below */
+		String tea=JOptionPane.showInputDialog("What flavor tea would you like?");
+		TeaBag flavor=new TeaBag(tea);
+		Kettle water=new Kettle();
+	}
 }
 
 class TeaBag {
@@ -64,5 +69,3 @@ class Cup {
 	}
 
 }
-
-
