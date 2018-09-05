@@ -8,9 +8,12 @@ import javax.swing.JOptionPane;
 public class TeaMaker {
 	public static void main(String[] args) {
 		/* Figure out how to make a cup of tea using the classes below */
-		String tea=JOptionPane.showInputDialog("What flavor tea would you like?");
-		TeaBag flavor=new TeaBag(tea);
-		Kettle water=new Kettle();
+		String tea = JOptionPane.showInputDialog("What flavor tea would you like? Choose from: green, mint, chamomile, or passion fruit");
+		TeaBag flavor = new TeaBag(tea);
+		Kettle water = new Kettle();
+		water.boil();
+		Cup cup = new Cup();
+		cup.makeTea(flavor, water.getWater());
 	}
 }
 
