@@ -1,9 +1,11 @@
 package extra;
 
+import java.util.Random;
+
 public class Vault {
 	int secretCode;
-	public Vault(int secretCode2){
-		secretCode= secretCode2;
+	public Vault(){
+		secretCode= new Random().nextInt(1000000);
 	}
 
 	boolean tryCode(int code) {
